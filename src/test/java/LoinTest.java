@@ -10,7 +10,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import java.util.List;
 
 @RunWith(MockitoJUnitRunner.class)
-public class TestLion {
+public class LoinTest {
 
     @Mock
     Feline feline;
@@ -34,9 +34,9 @@ public class TestLion {
         Assert.assertEquals(food, lion.getFood());
     }
 
-   @Test
+    @Test
     public void testConstructorInvalidSex() {
-                Exception exception = Assert.assertThrows(Exception.class, () -> {
+        Exception exception = Assert.assertThrows(Exception.class, () -> {
             new Lion("Некорректное значение", feline);
         });
 
@@ -51,10 +51,6 @@ public class TestLion {
         boolean a = lion.doesHaveMane();
         Assert.assertEquals(true, a);
     }
-
-
-
-
 }
 
 
